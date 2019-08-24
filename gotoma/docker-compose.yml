@@ -1,0 +1,10 @@
+version: '3.4'
+services:
+    gotoma.dnp.adriamb.eth:
+        image: 'gotoma.dnp.adriamb.eth:0.0.1'
+        build: .
+        ports:
+           - 8080:8080
+        volumes:
+           - /root/gotoma/config.yml:/app/config.yaml
+           - /var/spool/asterisk/outgoing/:/tmp/
